@@ -2,7 +2,7 @@ import yfinance as yf
 from openai import OpenAI
 from datetime import datetime
 
-
+#这只是一个demo，不要较真
 class DataScraperAgent:
     """
     Agent 1: 负责收集量化（价格）和定性（新闻）的市场数据。
@@ -88,7 +88,6 @@ class StrategyAnalystAgent:
     """
 
     def __init__(self, api_key, base_url):
-        # 使用阿里云的兼容模式初始化 LLM 客户端
         self.client = OpenAI(api_key=api_key, base_url=base_url)
 
     def generate_analysis(self, ticker, market_data, news_data):
@@ -115,7 +114,7 @@ class StrategyAnalystAgent:
 
         try:
             response = self.client.chat.completions.create(
-                model="qwen-max",  # 依然使用 Qwen Max 模型
+                model="qwen-max",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
