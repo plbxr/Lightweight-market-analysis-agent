@@ -129,8 +129,8 @@ class StrategyAnalystAgent:
 
 def main():
     # --- 基础配置 ---
-    API_KEY = "sk-1bacc57f8b4b40e2afe4a6cb83624e6e"
-    BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    API_KEY = "sk"
+    BASE_URL = ""
     TARGET_TICKER = "SLV"
 
     print(f"=== 正在为 {TARGET_TICKER} 初始化多 Agent 协同系统 ===\n")
